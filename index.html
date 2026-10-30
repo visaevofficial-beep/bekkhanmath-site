@@ -3,93 +3,881 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Бекхан Висаев | Репетитор по математике (ЕГЭ, ОГЭ)</title>
+
+    <meta
+        name="description"
+        content="Бекхан Висаев — репетитор по математике. Подготовка к ЕГЭ и ОГЭ, индивидуальный подход, авторские материалы и системная подготовка к экзаменам."
+    >
+    <meta name="theme-color" content="#6b1d2f">
+
+    <title>Бекхан Висаев — репетитор по математике | ЕГЭ и ОГЭ</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- Шапка сайта -->
-    <header>
-        <h1>Бекхан Висаев</h1>
-        <p class="subtitle">Подготовка к ЕГЭ и ОГЭ по математике</p>
+    <!-- ШАПКА -->
+    <header class="hero" id="home">
+        <div class="container">
+
+            <nav class="navigation" aria-label="Основная навигация">
+                <a class="logo" href="#home">БВ<span>.</span></a>
+
+                <div class="nav-links">
+                    <a href="#about">Обо мне</a>
+                    <a href="#lessons">Занятия</a>
+                    <a href="#materials">Материалы</a>
+                    <a href="#prices">Услуги</a>
+                </div>
+
+                <a class="nav-cta" href="#contacts">Записаться ↗</a>
+            </nav>
+
+            <div class="hero-content">
+
+                <div class="hero-text">
+                    <span class="eyebrow">
+                        <span class="status-dot"></span>
+                        РЕПЕТИТОР ПО МАТЕМАТИКЕ
+                    </span>
+
+                    <h1>
+                        Математика,<br>
+                        которую ты <span class="accent-text">понимаешь.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Бекхан Висаев — подготовка к ЕГЭ и ОГЭ по математике.
+                        Помогаю разобраться в сложных темах, выстроить систему
+                        знаний и уверенно прийти к результату.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#contacts">
+                            Записаться на пробный урок
+                            <span aria-hidden="true">↗</span>
+                        </a>
+
+                        <a class="button button-secondary" href="#about">
+                            Познакомиться
+                        </a>
+                    </div>
+
+                    <div class="hero-note">
+                        <span class="note-icon" aria-hidden="true">✳</span>
+                        Индивидуальная программа для каждого ученика
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="portrait-card">
+
+                        <div class="portrait-placeholder">
+                            <!-- Замени photo1.jpg на свою фотографию -->
+                            <img
+                                src="photo1.jpg"
+                                alt="Бекхан Висаев, репетитор по математике"
+                                class="portrait-image"
+                            >
+
+                            <div class="portrait-fallback" aria-hidden="true">
+                                <span>БВ</span>
+                            </div>
+                        </div>
+
+                        <div class="portrait-caption">
+                            <div>
+                                <h2>Бекхан Висаев</h2>
+                                <p>Математика с пониманием</p>
+                            </div>
+
+                            <span class="portrait-arrow" aria-hidden="true">↗</span>
+                        </div>
+                    </div>
+
+                    <div class="floating-card floating-card-top">
+                        <span class="floating-icon" aria-hidden="true">∑</span>
+                        <div>
+                            <strong>Мехмат МГУ</strong>
+                            <span>Фундаментальная база</span>
+                        </div>
+                    </div>
+
+                    <div class="floating-card floating-card-bottom">
+                        <span class="floating-number">80+</span>
+                        <div>
+                            <strong>Каждый второй</strong>
+                            <span>Результат 80+ баллов</span>
+                        </div>
+                    </div>
+
+                    <div class="decorative-circle decorative-circle-one"></div>
+                    <div class="decorative-circle decorative-circle-two"></div>
+                </div>
+
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">лет опыта</span>
+                </div>
+
+                <div class="stat-item">
+                    <span class="stat-number">МГУ</span>
+                    <span class="stat-label">мехмат</span>
+                </div>
+
+                <div class="stat-item">
+                    <span class="stat-number">80+</span>
+                    <span class="stat-label">баллов на ЕГЭ</span>
+                </div>
+
+                <div class="stat-description">
+                    <span class="stat-description-icon" aria-hidden="true">↗</span>
+                    <p>
+                        Не просто решаем задачи — учимся мыслить
+                        и понимать математику.
+                    </p>
+                </div>
+            </div>
+
+        </div>
     </header>
 
-    <div class="container">
-        
-        <!-- Обо мне -->
-        <section class="card">
-            <h2>О преподавателе</h2>
-            <p><strong>Образование:</strong> Мехмат МГУ им. М. В. Ломоносова (фундаментальная математика и математическая физика) с 2021 г.</p>
-            <p>Больше 5 лет готовлю школьников к ЕГЭ и ОГЭ по математике. Моя цель — объяснить сложные темы через логику и простые примеры, чтобы задачи решались на автомате, без зубрежки формул. Специализируюсь только на экзаменах, и каждое занятие работает на один результат.</p>
-            <p><strong>Достижения:</strong> Призер национальной олимпиады Phystech.International по физике и математике.</p>
-        </section>
 
-        <!-- Блок видео-приветствия (YouTube Embed) -->
-        <section class="card">
-            <h2>Видео-визитка</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/SC6uGHr_0v4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <main>
+
+        <!-- О ПРЕПОДАВАТЕЛЕ -->
+        <section class="section about-section" id="about">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">01 / ОБО МНЕ</span>
+                        <h2 class="section-title">
+                            Сильная база.<br>
+                            <span class="accent-text">Понятные объяснения.</span>
+                        </h2>
+                    </div>
+
+                    <p class="section-intro">
+                        Моя задача — не заставить тебя запомнить формулы,
+                        а научить самостоятельно находить решения.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+
+                    <article class="about-card about-card-main">
+                        <div class="card-icon" aria-hidden="true">∫</div>
+
+                        <h3>Фундаментальные знания</h3>
+
+                        <p>
+                            Учусь на механико-математическом факультете МГУ.
+                            Фундаментальная математическая подготовка помогает
+                            мне объяснять материал последовательно, глубоко
+                            и без лишних усложнений.
+                        </p>
+
+                        <span class="card-index">01</span>
+                    </article>
+
+                    <article class="about-card">
+                        <div class="card-icon" aria-hidden="true">✳</div>
+
+                        <h3>Олимпиадный опыт</h3>
+
+                        <p>
+                            Призёр олимпиады Phystech.International.
+                            Знаю, как подходить к нестандартным задачам
+                            и развивать математическое мышление.
+                        </p>
+
+                        <span class="card-index">02</span>
+                    </article>
+
+                    <article class="about-card">
+                        <div class="card-icon" aria-hidden="true">↗</div>
+
+                        <h3>Без бессмысленной зубрёжки</h3>
+
+                        <p>
+                            Разбираем логику решений, учимся видеть связи
+                            между темами и закрепляем знания практикой.
+                            Формулы становятся инструментом, а не целью.
+                        </p>
+
+                        <span class="card-index">03</span>
+                    </article>
+
+                </div>
             </div>
         </section>
 
-        <!-- Результаты учеников -->
-        <section class="card stats-card">
-            <h2>🎯 Результаты выпускников</h2>
-            <ul>
-                <li><strong>85,7 баллов</strong> — средний результат моих учеников на профильном ЕГЭ. Каждый второй сдаёт на 80+.</li>
-                <li><strong>90% учеников</strong> сдали ОГЭ на «4» и «5» (даже те, кто начинал с твердой «двойки» в середине 9 класса).</li>
-                <li>Выпускники уже учатся на бюджете в ТОП-10 и ТОП-100 вузов России.</li>
-            </ul>
+
+        <!-- ВИДЕО-ВИЗИТКА -->
+        <section class="section video-section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">02 / ЗНАКОМСТВО</span>
+                        <h2 class="section-title">
+                            Давай <span class="accent-text">знакомиться.</span>
+                        </h2>
+                    </div>
+
+                    <p class="section-intro">
+                        Немного обо мне, моём подходе и о том,
+                        как будут проходить наши занятия.
+                    </p>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-frame">
+
+                        <!--
+                            ЗАМЕНИ iframe на ссылку своего видео.
+                            Пример:
+                            https://www.youtube.com/embed/ID_ТВОЕГО_ВИДЕО
+                        -->
+                        <iframe
+                            src="https://www.youtube.com/embed/"
+                            title="Видео-визитка Бекхана Висаева"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            referrerpolicy="strict-origin-when-cross-origin"
+                        ></iframe>
+
+                    </div>
+
+                    <div class="video-caption">
+                        <div>
+                            <span class="video-label">ВИДЕО-ВИЗИТКА</span>
+                            <h3>Познакомимся поближе?</h3>
+                        </div>
+
+                        <span class="video-caption-icon" aria-hidden="true">▶</span>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
-        <!-- Как проходят занятия -->
-        <section class="card">
-            <h2>💻 Комфортный онлайн-формат</h2>
-            <ul>
-                <li><strong>Всё в одном окне:</strong> Созвон и видеосвязь проходят прямо на современной интерактивной доске. Не нужно скачивать Zoom, Telegram или сторонние программы — достаточно одного клика по постоянной ссылке в браузере.</li>
-                <li><strong>Максимум КПД:</strong> Ученик не тратит время на дорогу. Все графики, формулы и разборы автоматически сохраняются в личном кабинете — повторить материал можно в один клик перед контрольной.</li>
-                <li><strong>Поддержка 24/7:</strong> Ученик может написать мне в Telegram по любому вопросу школьного или домашнего задания. Я запишу короткий видеоразбор и помогу разобраться.</li>
-                <li><strong>Контроль для родителей:</strong> Каждую неделю отправляю родителям в мессенджер краткий отчет о прогрессе ребенка.</li>
-            </ul>
+
+        <!-- КАК ПРОХОДЯТ ЗАНЯТИЯ -->
+        <section class="section lessons-section" id="lessons">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">03 / МОЙ ПОДХОД</span>
+                        <h2 class="section-title">
+                            Как проходят<br>
+                            <span class="accent-text">занятия.</span>
+                        </h2>
+                    </div>
+
+                    <p class="section-intro">
+                        Системная подготовка, регулярная практика
+                        и понятный план действий на каждом этапе.
+                    </p>
+                </div>
+
+                <div class="lessons-grid">
+
+                    <article class="lesson-card lesson-card-featured">
+                        <div class="lesson-card-top">
+                            <span class="lesson-number">01</span>
+                            <span class="lesson-icon" aria-hidden="true">✳</span>
+                        </div>
+
+                        <div>
+                            <span class="lesson-tag">СТАРТ</span>
+
+                            <h3>
+                                Начнём с бесплатного
+                                вводного занятия
+                            </h3>
+
+                            <p>
+                                Познакомимся, определим текущий уровень,
+                                найдём пробелы в знаниях и составим
+                                индивидуальный план подготовки.
+                            </p>
+                        </div>
+
+                        <a href="#contacts" class="card-link">
+                            Записаться на знакомство <span>↗</span>
+                        </a>
+                    </article>
+
+                    <article class="lesson-card">
+                        <div class="lesson-card-top">
+                            <span class="lesson-number">02</span>
+                            <span class="lesson-icon" aria-hidden="true">↗</span>
+                        </div>
+
+                        <div>
+                            <span class="lesson-tag">СИСТЕМА</span>
+
+                            <h3>
+                                Регулярное повторение —
+                                залог успеха на экзамене
+                            </h3>
+
+                            <p>
+                                Возвращаемся к пройденным темам,
+                                решаем задания разных типов и отслеживаем
+                                прогресс, чтобы знания оставались надолго.
+                            </p>
+                        </div>
+
+                        <div class="lesson-bottom-note">
+                            <span class="check-icon" aria-hidden="true">✓</span>
+                            Понимаешь, что уже умеешь
+                        </div>
+                    </article>
+
+                    <article class="lesson-card">
+                        <div class="lesson-card-top">
+                            <span class="lesson-number">03</span>
+                            <span class="lesson-icon" aria-hidden="true">⌘</span>
+                        </div>
+
+                        <div>
+                            <span class="lesson-tag">ОНЛАЙН</span>
+
+                            <h3>Комфортный онлайн-формат</h3>
+
+                            <p>
+                                Интерактивная доска, материалы и разборы
+                                в одном рабочем пространстве. Личный кабинет
+                                помогает организовать учебный процесс.
+                            </p>
+                        </div>
+
+                        <div class="lesson-bottom-note">
+                            <span class="check-icon" aria-hidden="true">✓</span>
+                            Учись из любой точки мира
+                        </div>
+                    </article>
+
+                </div>
+            </div>
         </section>
 
-        <!-- Направления и цены -->
-        <section class="card">
-            <h2>Услуги</h2>
-            <div class="price-item">
-                <span>ОГЭ по математике</span>
-                <span class="price">по договорённости</span>
-            </div>
-            <div class="price-item">
-                <span>ЕГЭ по математике (Базовый уровень)</span>
-                <span class="price">по договорённости</span>
-            </div>
-            <div class="price-item">
-                <span>ЕГЭ по математике (Профильный уровень)</span>
-                <span class="price">по договорённости</span>
-            </div>
-            <div class="price-item">
-                <span>Алгебра и Геометрия</span>
-                <span class="price">по договорённости</span>
+
+        <!-- УЧЕБНЫЕ МАТЕРИАЛЫ -->
+        <section class="section materials-section" id="materials">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">04 / МОИ МАТЕРИАЛЫ</span>
+                        <h2 class="section-title">
+                            Всё необходимое<br>
+                            <span class="accent-text">для результата.</span>
+                        </h2>
+                    </div>
+
+                    <p class="section-intro">
+                        Авторские конспекты, подробные решения
+                        и домашние задания для самостоятельной работы.
+                    </p>
+                </div>
+
+                <div class="materials-grid">
+
+                    <!-- Карточка 1 -->
+                    <article class="material-card">
+                        <div class="material-image material-image-beige">
+
+                            <img
+                                src="photo2.jpg"
+                                alt="Пример авторского конспекта по математике"
+                                loading="lazy"
+                            >
+
+                            <div class="document-preview" aria-hidden="true">
+                                <div class="document-sheet">
+                                    <span class="document-top-line"></span>
+                                    <span class="document-title-line"></span>
+                                    <span class="document-line"></span>
+                                    <span class="document-line short"></span>
+
+                                    <div class="document-formula">
+                                        x² + y² = r²
+                                    </div>
+
+                                    <span class="document-line"></span>
+                                    <span class="document-line medium"></span>
+                                    <span class="document-line short"></span>
+                                </div>
+                            </div>
+
+                            <span class="material-badge">PDF / КОНСПЕКТЫ</span>
+                        </div>
+
+                        <div class="material-info">
+                            <span class="material-number">01</span>
+                            <h3>Авторские конспекты</h3>
+                            <p>
+                                Ключевые формулы, понятные объяснения
+                                и примеры решения задач.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <!-- Карточка 2 -->
+                    <article class="material-card">
+                        <div class="material-image material-image-pink">
+
+                            <img
+                                src="photo3.jpg"
+                                alt="Пример пошагового решения задания второй части ЕГЭ"
+                                loading="lazy"
+                            >
+
+                            <div class="solution-preview" aria-hidden="true">
+                                <div class="solution-sheet">
+                                    <span class="solution-heading">РЕШЕНИЕ</span>
+
+                                    <div class="solution-step">
+                                        <span>1.</span>
+                                        <div>
+                                            <span class="document-line"></span>
+                                            <span class="document-line short"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="solution-step">
+                                        <span>2.</span>
+                                        <div>
+                                            <span class="document-line medium"></span>
+                                            <span class="document-line short"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="solution-answer">
+                                        Ответ: x = 2
+                                    </div>
+                                </div>
+                            </div>
+
+                            <span class="material-badge">ЕГЭ / РАЗБОРЫ</span>
+                        </div>
+
+                        <div class="material-info">
+                            <span class="material-number">02</span>
+                            <h3>Пошаговые решения 2 части</h3>
+                            <p>
+                                Подробная логика решения сложных заданий
+                                с объяснением каждого шага.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <!-- Карточка 3 -->
+                    <article class="material-card">
+                        <div class="material-image material-image-green">
+
+                            <img
+                                src="photo4.jpg"
+                                alt="Пример домашнего задания по математике"
+                                loading="lazy"
+                            >
+
+                            <div class="homework-preview" aria-hidden="true">
+                                <div class="homework-sheet">
+                                    <span class="homework-heading">
+                                        ДОМАШНЯЯ РАБОТА
+                                    </span>
+
+                                    <div class="homework-task">
+                                        <span class="task-check">✓</span>
+                                        <span class="document-line"></span>
+                                    </div>
+
+                                    <div class="homework-task">
+                                        <span class="task-check">✓</span>
+                                        <span class="document-line medium"></span>
+                                    </div>
+
+                                    <div class="homework-task">
+                                        <span class="task-check"></span>
+                                        <span class="document-line"></span>
+                                    </div>
+
+                                    <div class="homework-task">
+                                        <span class="task-check"></span>
+                                        <span class="document-line short"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <span class="material-badge">ПРАКТИКА</span>
+                        </div>
+
+                        <div class="material-info">
+                            <span class="material-number">03</span>
+                            <h3>Домашка с автопроверкой</h3>
+                            <p>
+                                Закрепляй пройденное, сразу проверяй ответы
+                                и понимай, над чем стоит поработать.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <!-- Карточка 4 -->
+                    <article class="material-card">
+                        <div class="material-image material-image-blue">
+
+                            <img
+                                src="photo5.jpg"
+                                alt="Пример математических графиков и схем"
+                                loading="lazy"
+                            >
+
+                            <div class="graph-preview" aria-hidden="true">
+                                <div class="graph-sheet">
+                                    <div class="graph-equation">
+                                        y = x² − 2x
+                                    </div>
+
+                                    <svg
+                                        class="graph-svg"
+                                        viewBox="0 0 240 160"
+                                        role="img"
+                                        aria-label="Пример графика параболы"
+                                    >
+                                        <defs>
+                                            <pattern
+                                                id="graph-grid"
+                                                width="20"
+                                                height="20"
+                                                patternUnits="userSpaceOnUse"
+                                            >
+                                                <path
+                                                    d="M 20 0 L 0 0 0 20"
+                                                    fill="none"
+                                                    stroke="#d9d1c8"
+                                                    stroke-width="0.7"
+                                                />
+                                            </pattern>
+                                        </defs>
+
+                                        <rect
+                                            width="240"
+                                            height="160"
+                                            fill="url(#graph-grid)"
+                                        />
+
+                                        <path
+                                            d="M 12 100 H 228 M 120 8 V 150"
+                                            stroke="#8d817b"
+                                            stroke-width="1.3"
+                                            fill="none"
+                                        />
+
+                                        <path
+                                            d="M 55 15 Q 120 185 185 15"
+                                            stroke="#6b1d2f"
+                                            stroke-width="3"
+                                            fill="none"
+                                            stroke-linecap="round"
+                                        />
+
+                                        <circle
+                                            cx="120"
+                                            cy="100"
+                                            r="4"
+                                            fill="#6b1d2f"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <span class="material-badge">ГРАФИКИ / СХЕМЫ</span>
+                        </div>
+
+                        <div class="material-info">
+                            <span class="material-number">04</span>
+                            <h3>Графики и наглядные схемы</h3>
+                            <p>
+                                Визуализируем абстрактные понятия
+                                и учимся видеть математику.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="materials-note">
+                    <span aria-hidden="true">✳</span>
+                    Все материалы используются в процессе подготовки
+                    и подбираются под твои цели.
+                </div>
+
             </div>
         </section>
 
-        <!-- Контакты и кнопка действия -->
-        <section class="card contacts">
-            <h2>🎁 Бесплатный пробный урок и диагностика</h2>
-            <p>Приглашаю на полноценное бесплатное онлайн-занятие (30–45 минут). Мы проверим текущий уровень знаний, подсветим скрытые пробелы и составим пошаговый план подготовки.</p>
-            
-            <div class="buttons-container">
-                <a href="https://t.me/math5" target="_blank" class="btn telegram">Написать в Telegram</a>
-                <a href="https://wa.me" target="_blank" class="btn whatsapp">Написать в WhatsApp</a>
-            </div>
-            
-            <p class="profi-link">Моя проверенная анкета: <a href="https://profi.ru/profile/VisayevBD" target="_blank">Профи.ру</a></p>
-        </section>
-    </div>
 
-    <footer>
-        <p>&copy; 2026 Репетитор по математике Висаев Бекхан Джамшедович. Все права защищены.</p>
+        <!-- УСЛУГИ И ЦЕНЫ -->
+        <section class="section prices-section" id="prices">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">05 / НАПРАВЛЕНИЯ</span>
+                        <h2 class="section-title">
+                            Подготовка под<br>
+                            <span class="accent-text">твои задачи.</span>
+                        </h2>
+                    </div>
+
+                    <p class="section-intro">
+                        Выберем направление, определим цель
+                        и договоримся об удобном формате работы.
+                    </p>
+                </div>
+
+                <div class="prices-grid">
+
+                    <article class="price-card">
+                        <div class="price-card-top">
+                            <span class="price-icon" aria-hidden="true">01</span>
+                            <span class="price-label">9 КЛАСС</span>
+                        </div>
+
+                        <h3>ОГЭ</h3>
+
+                        <p>
+                            Подготовка к экзамену с повторением
+                            школьной программы и отработкой экзаменационных
+                            заданий.
+                        </p>
+
+                        <div class="price-divider"></div>
+
+                        <div class="price-bottom">
+                            <span>Стоимость</span>
+                            <strong>По договорённости</strong>
+                        </div>
+                    </article>
+
+
+                    <article class="price-card price-card-highlight">
+                        <div class="price-card-top">
+                            <span class="price-icon" aria-hidden="true">02</span>
+                            <span class="price-label">11 КЛАСС</span>
+                        </div>
+
+                        <h3>ЕГЭ профиль</h3>
+
+                        <p>
+                            Системная подготовка, сложные задания,
+                            вторая часть и стратегия достижения
+                            целевого балла.
+                        </p>
+
+                        <div class="price-divider"></div>
+
+                        <div class="price-bottom">
+                            <span>Стоимость</span>
+                            <strong>По договорённости</strong>
+                        </div>
+                    </article>
+
+
+                    <article class="price-card">
+                        <div class="price-card-top">
+                            <span class="price-icon" aria-hidden="true">03</span>
+                            <span class="price-label">11 КЛАСС</span>
+                        </div>
+
+                        <h3>ЕГЭ база</h3>
+
+                        <p>
+                            Подготовка к базовому экзамену,
+                            разбор основных тем и уверенное
+                            решение типовых заданий.
+                        </p>
+
+                        <div class="price-divider"></div>
+
+                        <div class="price-bottom">
+                            <span>Стоимость</span>
+                            <strong>По договорённости</strong>
+                        </div>
+                    </article>
+
+
+                    <article class="price-card">
+                        <div class="price-card-top">
+                            <span class="price-icon" aria-hidden="true">04</span>
+                            <span class="price-label">ШКОЛЬНАЯ ПРОГРАММА</span>
+                        </div>
+
+                        <h3>Алгебра и геометрия</h3>
+
+                        <p>
+                            Помощь со школьной программой,
+                            устранение пробелов и разбор
+                            непонятных тем.
+                        </p>
+
+                        <div class="price-divider"></div>
+
+                        <div class="price-bottom">
+                            <span>Стоимость</span>
+                            <strong>По договорённости</strong>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p class="prices-disclaimer">
+                    Формат занятий и стоимость обсуждаются индивидуально
+                    с учётом целей, уровня подготовки и расписания.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- КОНТАКТЫ -->
+        <section class="section contacts-section" id="contacts">
+            <div class="container">
+
+                <div class="contact-card">
+
+                    <div class="contact-decoration contact-decoration-one"></div>
+                    <div class="contact-decoration contact-decoration-two"></div>
+
+                    <div class="contact-content">
+
+                        <span class="eyebrow eyebrow-light">
+                            06 / ТВОЙ СЛЕДУЮЩИЙ ШАГ
+                        </span>
+
+                        <h2>
+                            Начнём с первого<br>
+                            <span>понятного шага.</span>
+                        </h2>
+
+                        <p class="contact-description">
+                            Запишись на бесплатное вводное занятие.
+                            Познакомимся, обсудим цели и поймём,
+                            как лучше организовать твою подготовку.
+                        </p>
+
+                        <div class="contact-actions">
+
+                            <a
+                                class="contact-button contact-button-light"
+                                href="https://t.me"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <svg
+                                    class="contact-button-icon"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M21.8 3.4 18.5 20c-.25 1.18-.92 1.47-1.86.92l-5.15-3.8-2.48 2.39c-.27.27-.5.5-1.02.5l.37-5.25 9.55-8.63c.42-.37-.1-.58-.65-.21L5.45 13.3.37 11.71c-1.1-.34-1.12-1.1.23-1.63L20.46 2.5c.91-.34 1.7.22 1.34.9Z"
+                                        fill="currentColor"
+                                    />
+                                </svg>
+
+                                Написать в Telegram
+                                <span aria-hidden="true">↗</span>
+                            </a>
+
+                            <a
+                                class="contact-button contact-button-outline"
+                                href="https://wa.me/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <svg
+                                    class="contact-button-icon"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M20.52 3.48A11.84 11.84 0 0 0 12.08 0C5.5 0 .14 5.36.14 11.94c0 2.1.55 4.15 1.6 5.96L0 24l6.26-1.64a11.93 11.93 0 0 0 5.82 1.48h.01c6.58 0 11.94-5.36 11.94-11.94 0-3.19-1.24-6.19-3.51-8.42ZM12.09 21.8a9.9 9.9 0 0 1-5.05-1.39l-.36-.21-3.72.98.99-3.63-.24-.37a9.83 9.83 0 0 1-1.52-5.24c0-5.47 4.45-9.92 9.93-9.92a9.85 9.85 0 0 1 7.01 2.91 9.85 9.85 0 0 1 2.9 7.02c0 5.47-4.45 9.92-9.93 9.92Zm5.45-7.43c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.47-1.76-1.64-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.21 5.1 4.5.71.31 1.26.5 1.69.64.71.22 1.36.19 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"
+                                        fill="currentColor"
+                                    />
+                                </svg>
+
+                                Написать в WhatsApp
+                                <span aria-hidden="true">↗</span>
+                            </a>
+
+                        </div>
+
+                        <p class="contact-alternative">
+                            Или посмотри мою
+                            <a
+                                href="https://profi.ru"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                анкету на Профи.ру ↗
+                            </a>
+                        </p>
+
+                    </div>
+
+                    <div class="contact-side">
+                        <div class="contact-symbol" aria-hidden="true">
+                            <span>∑</span>
+                            <span class="contact-symbol-small">x² + y²</span>
+                        </div>
+
+                        <div class="contact-side-note">
+                            <span class="contact-side-dot"></span>
+                            <p>
+                                Первый шаг — знакомство.<br>
+                                Дальше составим план вместе.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <div class="container footer-inner">
+
+            <a class="logo footer-logo" href="#home">
+                БВ<span>.</span>
+            </a>
+
+            <p class="footer-copyright">
+                © 2026 Репетитор по математике Висаев Бекхан Джамшедович
+            </p>
+
+            <a class="footer-up" href="#home">
+                Наверх ↑
+            </a>
+
+        </div>
     </footer>
 
 </body>
