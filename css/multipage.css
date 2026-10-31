@@ -1,6 +1,6 @@
 
 /* Дополнительные стили многостраничной версии */
-.page-main { padding-top: 112px; }
+.page-main { padding-top: 0; }
 .page-main > .section:first-child { padding-top: 72px; }
 .page-main .section { min-height: 60vh; }
 .page-main .section-dark { min-height: 60vh; }
@@ -15,7 +15,7 @@
 .navigation a { transition: color var(--transition); }
 .navigation a:hover { color: var(--chalk-green-light); }
 @media (max-width: 760px) {
-  .page-main { padding-top: 90px; }
+  .page-main { padding-top: 0; }
   .page-main > .section:first-child { padding-top: 55px; }
   .page-main .section-heading { margin-bottom: 32px; }
   .materials-telegram { margin-top: 28px; }
@@ -34,3 +34,236 @@
 /* Главная начинается сразу под фиксированной по макету шапкой. */
 .page-main.home-main { padding-top: 0; }
 .page-main.home-main > .hero { margin-top: 0; }
+
+
+/* ========================================
+   ВНУТРЕННИЕ СТРАНИЦЫ: шапка в потоке, футер у нижнего края
+======================================== */
+
+/* Шапка не перекрывает контент, а стоит над ним — без нахлёста и без зазора */
+.header.header-static {
+    position: relative;
+}
+
+/* Страница занимает минимум весь экран: футер всегда внизу, даже если контента мало */
+body.subpage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+body.subpage .page-main {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+}
+
+body.subpage .page-main > section {
+    flex: 1 0 auto;
+}
+
+/* Страница контактов: карточка по центру свободной области */
+body.subpage .contacts-section {
+    display: flex;
+    align-items: center;
+}
+
+body.subpage .contacts-section > .container {
+    flex: 0 1 auto;
+}
+
+
+/* ========================================
+   АНИМАЦИЯ ПОЯВЛЕНИЯ (первая загрузка + прокрутка)
+   Работает через js/reveal.js и атрибут data-reveal.
+   Используется свойство translate, поэтому hover-эффекты (transform) не страдают.
+======================================== */
+
+@keyframes reveal-up {
+    from { opacity: 0; translate: 0 32px; }
+    to   { opacity: 1; translate: 0 0; }
+}
+
+@keyframes header-in {
+    from { opacity: 0; translate: 0 -16px; }
+    to   { opacity: 1; translate: 0 0; }
+}
+
+.js [data-reveal] {
+    opacity: 0;
+    translate: 0 32px;
+}
+
+.js [data-reveal].is-visible {
+    animation: reveal-up .85s cubic-bezier(.22, .75, .25, 1) both;
+    animation-delay: var(--reveal-delay, 0s);
+}
+
+.js [data-reveal].reveal-done {
+    opacity: 1;
+    translate: none;
+    animation: none;
+}
+
+.first-visit .header-inner {
+    animation: header-in .7s cubic-bezier(.22, .75, .25, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .js [data-reveal] {
+        opacity: 1;
+        translate: none;
+        animation: none;
+    }
+}
+
+
+/* Векторные иконки в кнопках: размер и цвет берутся от текста кнопки */
+.button-icon {
+    flex: none;
+    width: 1.55em;
+    height: 1.55em;
+    fill: currentColor;
+}
+
+
+/* ========================================
+   ФОРМУЛЫ И ЧЕРТЁЖ НА ГЛАВНОЙ
+======================================== */
+
+.floating-formula sup,
+.math-decoration sup,
+.math-decoration sub {
+    font-size: 0.62em;
+    line-height: 0;
+}
+
+/* Интеграл Эйлера — Пуассона (на месте, где раньше была синусоида) */
+.math-decoration-2 {
+    right: 22%;
+    bottom: 9%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+    font-size: 17px;
+}
+
+.math-decoration-2 .int-sign {
+    font-size: 2.1em;
+    line-height: 1;
+    font-style: normal;
+}
+
+.math-decoration-2 .int-limits {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    align-self: stretch;
+    margin: 0 4px 0 -4px;
+    font-size: 0.8em;
+}
+
+.math-decoration-2 .int-limits sup,
+.math-decoration-2 .int-limits sub {
+    font-size: 1em;
+}
+
+/* Вертикальная синусоида вдоль правого края главного экрана, плавно гаснет сверху и снизу */
+.math-decoration-1 {
+    top: 0;
+    right: 14px;
+    bottom: 0;
+    width: 40px;
+    opacity: 0.4;
+
+    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='88' viewBox='0 0 40 88'><polyline points='16.05,-4 17.02,-3 18.01,-2 19.00,-1 20.00,0 21.00,1 21.99,2 22.98,3 23.95,4 24.89,5 25.82,6 26.71,7 27.57,8 28.39,9 29.17,10 29.90,11 30.58,12 31.21,13 31.78,14 32.29,15 32.74,16 33.12,17 33.44,18 33.69,19 33.86,20 33.97,21 34.01,22 33.97,23 33.86,24 33.69,25 33.44,26 33.12,27 32.74,28 32.29,29 31.78,30 31.21,31 30.58,32 29.90,33 29.17,34 28.39,35 27.57,36 26.71,37 25.82,38 24.89,39 23.95,40 22.98,41 21.99,42 21.00,43 20.00,44 19.00,45 18.01,46 17.02,47 16.05,48 15.11,49 14.18,50 13.29,51 12.43,52 11.61,53 10.83,54 10.10,55 9.42,56 8.79,57 8.22,58 7.71,59 7.26,60 6.88,61 6.56,62 6.31,63 6.14,64 6.03,65 5.99,66 6.03,67 6.14,68 6.31,69 6.56,70 6.88,71 7.26,72 7.71,73 8.22,74 8.79,75 9.42,76 10.10,77 10.83,78 11.61,79 12.43,80 13.29,81 14.18,82 15.11,83 16.05,84 17.02,85 18.01,86 19.00,87 20.00,88 21.00,89 21.99,90 22.98,91 23.95,92' fill='none' stroke='%23c4d5b7' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/></svg>") repeat-y center top;
+
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 22%, #000 78%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0, #000 22%, #000 78%, transparent 100%);
+}
+
+/* ========================================
+   ЕДИНЫЙ УРОВЕНЬ ПОДПИСЕЙ (зелёная точка + «МЕТОДИКА», «МАТЕМАТИКА · ЕГЭ · ОГЭ» и т. д.)
+   Шапка 100px / 72px / 66px; подпись на внутренних страницах стоит на 72px / 55px ниже неё.
+======================================== */
+
+.hero {
+    padding-top: 172px;
+}
+
+/* Контакты: карточка прижата кверху, подпись внутри неё на том же уровне */
+body.subpage .contacts-section {
+    align-items: flex-start;
+    padding-top: 28px;
+}
+
+body.subpage .contacts-card {
+    padding-top: 44px;
+}
+
+@media (max-width: 760px) {
+    .hero {
+        padding-top: 127px;
+    }
+
+    body.subpage .contacts-section {
+        padding-top: 27px;
+    }
+
+    body.subpage .contacts-card {
+        padding-top: 28px;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero {
+        padding-top: 121px;
+    }
+}
+
+body.subpage .contacts-main {
+    align-self: start;
+}
+
+/* На телефоне декоративный интеграл и синусоида скрыты, формула Эйлера уходит под карточку */
+@media (max-width: 760px) {
+    .math-decoration {
+        display: none;
+    }
+
+    .floating-formula {
+        bottom: -38px;
+    }
+}
+
+
+/* Зелёная черта у подписи стоит на середине заглавной «И» первой строки.
+   Она — часть строки и выравнивается по базовой линии шрифта (высота заглавной ≈ 0.72em),
+   поэтому не зависит от ширины экрана и переносов. Перенесённые строки идут с отступом под текстом. */
+.hero-bottom-note {
+    display: block;
+    padding-left: 41px;
+    text-indent: -41px;
+    line-height: 1.75;
+}
+
+.hero-bottom-note .note-line {
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    margin-right: 13px;
+    vertical-align: calc(0.36em - 0.5px);
+    transform: none;
+    text-indent: 0;
+}
+
+
+/* Мобильное меню: пункты по центру */
+@media (max-width: 760px) {
+    .navigation a {
+        text-align: center;
+    }
+}
