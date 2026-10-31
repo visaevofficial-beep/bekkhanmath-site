@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Свяжитесь с Бекханом Висаевым и запишитесь на бесплатное вводное занятие."><meta name="theme-color" content="#681d32">
+<title>Контакты и запись на занятия | BekkhanMath.ru</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/multipage.css"></head><body>
+<div class="site-background" aria-hidden="true"><div class="background-circle background-circle-1"></div><div class="background-circle background-circle-2"></div></div>
+<header class="header"><div class="container header-inner">
+<a aria-label="BekkhanMath.ru — главная страница" class="logo" href="../index.html#home">BekkhanMath<span>.</span>ru</a>
+<nav aria-label="Основная навигация" class="navigation" id="site-navigation"><a href="../index.html#home">Главная</a><a href="method.html">Методика</a><a href="materials.html">Материалы</a><a href="reviews.html">Отзывы</a><a href="services.html">Направления</a></nav><button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-navigation"><span></span><span></span><span></span></button>
+<a class="header-button" href="contacts.html">Обсудить занятия <span aria-hidden="true">↗</span></a>
+</div></header><main class="page-main"><section class="contacts-section section-dark" id="contacts">
+<div aria-hidden="true" class="contacts-pattern"></div>
+<div class="container">
+<div class="contacts-card">
+<div class="contacts-main">
+<div class="eyebrow hero-eyebrow">
+<span class="status-dot"></span>
+                            06 / СЛЕДУЮЩИЙ ШАГ
+                        </div>
+<h2 class="contacts-title">
+                            Давайте сделаем<br/>
+                            математику<br/>
+<span>понятной.</span>
+</h2>
+<p class="contacts-description">
+                            Начнём с бесплатного вводного занятия.
+                            Обсудим ваши цели, оценим текущий уровень знаний ребёнка
+                            и определим, как лучше организовать подготовку.
+                        </p>
+<div class="contacts-buttons">
+<a class="button button-light" href="https://t.me/math5" rel="noopener noreferrer" target="_blank">
+<span aria-hidden="true">↗</span>
+<img height="20" src="../images/telegram.png" width="20"/> Написать в Telegram
+                            </a>
+<a class="button button-outline" href="https://vk.ru/bkkhn" rel="noopener noreferrer" target="_blank">
+<span aria-hidden="true">↗</span>
+<img height="20" src="../images/vk.png" width="20"/> Написать в ВК
+                            </a>
+</div>
+<p class="contacts-footnote">
+                            Первое знакомство — возможность обсудить ваши цели
+                            и понять, подходит ли вам мой формат занятий.
+                        </p>
+</div>
+<aside class="contacts-side">
+<div class="profi-widget-heading">
+<span class="profi-widget-icon">↗</span>
+<div>
+<span class="profi-overline">
+                                    ЕСТЬ ВОПРОСЫ?
+                                </span>
+<h3>Загляните в мой профиль на Профи.ру</h3>
+<p>
+                                    Посмотрите отзывы и задайте интересующие вас вопросы.
+                                </p>
+</div>
+</div>
+<div class="profi-widget" data-id="affec634358b78a0089e8f2c3f2380c7" data-type="210x190">
+                            Powered by
+                            <a href="https://profi.ru/profile/VisayevBD" rel="noopener noreferrer" target="_blank"> profi.ru</a>
+</div>
+<script src="https://profi.ru/jqs/widget/widget.js"></script>
+<a class="profi-fallback-link" href="https://profi.ru/profile/VisayevBD" rel="noopener noreferrer" target="_blank">
+                            Открыть анкету на profi.ru
+                            <span aria-hidden="true">↗</span>
+</a>
+<div aria-hidden="true" class="contacts-equation">
+                            f(x) = ?
+                        </div>
+</aside>
+</div>
+</div>
+</section></main><footer class="footer"><div class="container footer-inner"><a class="logo footer-logo" href="#home">BekkhanMath<span>.</span>ru</a><p class="footer-copyright">© 2026 Бекхан Висаев. Все права защищены.</p><a aria-label="Вернуться наверх" class="back-to-top" href="#home">↑</a></div></footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".navigation");
+    if (!toggle || !nav) return;
+    const closeMenu = () => {
+        nav.classList.remove("is-open");
+        toggle.classList.remove("is-active");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Открыть меню");
+    };
+    toggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("is-open");
+        toggle.classList.toggle("is-active", isOpen);
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        toggle.setAttribute("aria-label", isOpen ? "Закрыть меню" : "Открыть меню");
+    });
+    nav.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
+    document.addEventListener("click", event => {
+        if (!nav.contains(event.target) && !toggle.contains(event.target)) closeMenu();
+    });
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape") closeMenu();
+    });
+});
+</script>
+</body></html>

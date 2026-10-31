@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Отзывы и результаты учеников Бекхана Висаева."><meta name="theme-color" content="#681d32">
+<title>Отзывы учеников | BekkhanMath.ru</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/multipage.css"></head><body>
+<div class="site-background" aria-hidden="true"><div class="background-circle background-circle-1"></div><div class="background-circle background-circle-2"></div></div>
+<header class="header"><div class="container header-inner">
+<a aria-label="BekkhanMath.ru — главная страница" class="logo" href="../index.html#home">BekkhanMath<span>.</span>ru</a>
+<nav aria-label="Основная навигация" class="navigation" id="site-navigation"><a href="../index.html#home">Главная</a><a href="method.html">Методика</a><a href="materials.html">Материалы</a><a href="reviews.html" aria-current="page">Отзывы</a><a href="services.html">Направления</a></nav><button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-navigation"><span></span><span></span><span></span></button>
+<a class="header-button" href="contacts.html">Обсудить занятия <span aria-hidden="true">↗</span></a>
+</div></header><main class="page-main"><section class="section reviews-section" id="reviews">
+<div class="container">
+<div class="section-heading">
+<div>
+<div class="eyebrow section-eyebrow">
+<span class="section-dot"></span>
+                            04 / ОТЗЫВЫ
+                        </div>
+<h2 class="section-title">
+                            Доверие начинается<br/>
+<span class="text-green">с реальных историй.</span>
+</h2>
+</div>
+</div>
+<div class="reviews-grid">
+<article class="review-card">
+<div class="review-card-top">
+<span class="review-mark">“</span>
+<span class="review-type">ОТЗЫВ УЧЕНИКА</span>
+</div>
+<div class="review-placeholder">
+<span class="review-placeholder-icon">✎</span>
+<h3>То, что было нужно.</h3>
+<p>
+                                Понятно объясняет теорию и даёт много задач.
+                                Благодаря большому количеству практики, со временем ошибиться всё труднее.
+                            </p>
+</div>
+<div class="review-author">
+<div class="review-avatar">У</div>
+<div>
+<strong>Никита</strong>
+<span>ЕГЭ 2026</span>
+</div>
+</div>
+</article>
+<article class="review-card review-card-featured">
+<div class="review-card-top">
+<span class="review-mark">“</span>
+<span class="review-type">ОТЗЫВ УЧЕНИКА</span>
+</div>
+<div class="review-placeholder">
+<span class="review-placeholder-icon">✎</span>
+<h3>От "2" до "4" за 2 месяца.</h3>
+<p>
+                                В марте писал на 2 и хотел сдать хотябы на 3.
+                                В итоге сдал на 4. Теперь иду в 10 класс!
+                            </p>
+</div>
+<div class="review-author">
+<div class="review-avatar">Р</div>
+<div>
+<strong>Савелий</strong>
+<span>ОГЭ 2026</span>
+</div>
+</div>
+</article>
+<article class="review-card">
+<div class="review-card-top">
+<span class="review-mark">“</span>
+<span class="review-type">ОТЗЫВ РОДИТЕЛЯ</span>
+</div>
+<div class="review-placeholder">
+<span class="review-placeholder-icon">✎</span>
+<h3>Я была спокойна.</h3>
+<p>
+                                Следила за её пробниками и баллы росли.
+                                Когда стала писать пробники на 80 я успакоилась. Поступили в медицинский!
+                            </p>
+</div>
+<div class="review-author">
+<div class="review-avatar">Е</div>
+<div>
+<strong>Илона</strong>
+<span>ЕГЭ 2025</span>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section></main><footer class="footer"><div class="container footer-inner"><a class="logo footer-logo" href="#home">BekkhanMath<span>.</span>ru</a><p class="footer-copyright">© 2026 Бекхан Висаев. Все права защищены.</p><a aria-label="Вернуться наверх" class="back-to-top" href="#home">↑</a></div></footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".navigation");
+    if (!toggle || !nav) return;
+    const closeMenu = () => {
+        nav.classList.remove("is-open");
+        toggle.classList.remove("is-active");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Открыть меню");
+    };
+    toggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("is-open");
+        toggle.classList.toggle("is-active", isOpen);
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        toggle.setAttribute("aria-label", isOpen ? "Закрыть меню" : "Открыть меню");
+    });
+    nav.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
+    document.addEventListener("click", event => {
+        if (!nav.contains(event.target) && !toggle.contains(event.target)) closeMenu();
+    });
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape") closeMenu();
+    });
+});
+</script>
+</body></html>

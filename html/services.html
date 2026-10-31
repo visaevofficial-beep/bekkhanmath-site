@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Подготовка к ОГЭ, профильному и базовому ЕГЭ, алгебре и геометрии."><meta name="theme-color" content="#681d32">
+<title>Направления подготовки | BekkhanMath.ru</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/multipage.css"></head><body>
+<div class="site-background" aria-hidden="true"><div class="background-circle background-circle-1"></div><div class="background-circle background-circle-2"></div></div>
+<header class="header"><div class="container header-inner">
+<a aria-label="BekkhanMath.ru — главная страница" class="logo" href="../index.html#home">BekkhanMath<span>.</span>ru</a>
+<nav aria-label="Основная навигация" class="navigation" id="site-navigation"><a href="../index.html#home">Главная</a><a href="method.html">Методика</a><a href="materials.html">Материалы</a><a href="reviews.html">Отзывы</a><a href="services.html" aria-current="page">Направления</a></nav><button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-navigation"><span></span><span></span><span></span></button>
+<a class="header-button" href="contacts.html">Обсудить занятия <span aria-hidden="true">↗</span></a>
+</div></header><main class="page-main"><section class="section services-section" id="services">
+<div class="container">
+<div class="section-heading">
+<div>
+<div class="eyebrow section-eyebrow">
+<span class="section-dot"></span>
+                            05 / НАПРАВЛЕНИЯ
+                        </div>
+<h2 class="section-title">
+                            Выбираем цель.<br/>
+<span class="text-green">Строим маршрут.</span>
+</h2>
+</div>
+<p class="section-heading-description">
+                        Содержание и интенсивность занятий зависят
+                        от ваших целей, текущего уровня знаний ребёнка и времени до экзамена.
+                    </p>
+</div>
+<div class="services-grid">
+<article class="service-card">
+<div class="service-top">
+<span class="service-number">01</span>
+<span class="service-symbol">↗</span>
+</div>
+<span class="service-category">ОСНОВНАЯ ШКОЛА</span>
+<h3>Подготовка к ОГЭ</h3>
+<p>
+                            Систематизация школьной программы,
+                            разбор типовых заданий и работа над ошибками вашего ребёнка.
+                        </p>
+<div class="service-bottom">
+<span>Стоимость</span>
+<strong>По договорённости</strong>
+</div>
+</article>
+<article class="service-card service-card-featured">
+<div class="service-top">
+<span class="service-number">02</span>
+<span class="service-symbol">Σ</span>
+</div>
+<span class="service-category">СТАРШИЕ КЛАССЫ</span>
+<h3>ЕГЭ · профильный уровень</h3>
+<p>
+                            Подготовка по темам экзамена, задачи повышенной
+                            сложности и стратегия решения вариантов.
+                        </p>
+<div class="service-bottom">
+<span>Стоимость</span>
+<strong>По договорённости</strong>
+</div>
+</article>
+<article class="service-card">
+<div class="service-top">
+<span class="service-number">03</span>
+<span class="service-symbol">√</span>
+</div>
+<span class="service-category">ШКОЛЬНАЯ ПРОГРАММА</span>
+<h3>ЕГЭ · базовый уровень</h3>
+<p>
+                            Восстановление основных знаний, отработка
+                            необходимых типов заданий и повышение уверенности ученика.
+                        </p>
+<div class="service-bottom">
+<span>Стоимость</span>
+<strong>По договорённости</strong>
+</div>
+</article>
+<article class="service-card">
+<div class="service-top">
+<span class="service-number">04</span>
+<span class="service-symbol">π</span>
+</div>
+<span class="service-category">ИНДИВИДУАЛЬНО</span>
+<h3>Алгебра и геометрия</h3>
+<p>
+                            Разбор школьных тем, подготовка к контрольным
+                            и устранение пробелов в знаниях вашего ребёнка.
+                        </p>
+<div class="service-bottom">
+<span>Стоимость</span>
+<strong>По договорённости</strong>
+</div>
+</article>
+</div>
+</div>
+</section></main><footer class="footer"><div class="container footer-inner"><a class="logo footer-logo" href="#home">BekkhanMath<span>.</span>ru</a><p class="footer-copyright">© 2026 Бекхан Висаев. Все права защищены.</p><a aria-label="Вернуться наверх" class="back-to-top" href="#home">↑</a></div></footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".navigation");
+    if (!toggle || !nav) return;
+    const closeMenu = () => {
+        nav.classList.remove("is-open");
+        toggle.classList.remove("is-active");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Открыть меню");
+    };
+    toggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("is-open");
+        toggle.classList.toggle("is-active", isOpen);
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        toggle.setAttribute("aria-label", isOpen ? "Закрыть меню" : "Открыть меню");
+    });
+    nav.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
+    document.addEventListener("click", event => {
+        if (!nav.contains(event.target) && !toggle.contains(event.target)) closeMenu();
+    });
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape") closeMenu();
+    });
+});
+</script>
+</body></html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Авторские конспекты, пошаговые решения и материалы для самостоятельной подготовки."><meta name="theme-color" content="#681d32">
+<title>Материалы по математике | BekkhanMath.ru</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/multipage.css"></head><body>
+<div class="site-background" aria-hidden="true"><div class="background-circle background-circle-1"></div><div class="background-circle background-circle-2"></div></div>
+<header class="header"><div class="container header-inner">
+<a aria-label="BekkhanMath.ru — главная страница" class="logo" href="../index.html#home">BekkhanMath<span>.</span>ru</a>
+<nav aria-label="Основная навигация" class="navigation" id="site-navigation"><a href="../index.html#home">Главная</a><a href="method.html">Методика</a><a href="materials.html" aria-current="page">Материалы</a><a href="reviews.html">Отзывы</a><a href="services.html">Направления</a></nav><button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-navigation"><span></span><span></span><span></span></button>
+<a class="header-button" href="contacts.html">Обсудить занятия <span aria-hidden="true">↗</span></a>
+</div></header><main class="page-main"><section class="section materials-section" id="materials">
+<div class="container">
+<div class="section-heading">
+<div>
+<div class="eyebrow section-eyebrow">
+<span class="section-dot"></span>
+                            03 / МАТЕРИАЛЫ
+                        </div>
+<h2 class="section-title">
+                            Всё нужное<br/>
+<span class="text-green">для уверенного решения.</span>
+</h2>
+</div>
+<p class="section-heading-description">
+                        Авторские материалы помогают структурировать знания,
+                        быстрее находить ошибки и заниматься самостоятельно.
+                    </p>
+</div>
+<div class="materials-grid">
+<article class="material-card">
+<div class="material-image material-image-1">
+<img alt="Пример авторского конспекта по математике" loading="lazy" src="../images/photo2.png"/>
+<span class="material-image-label">01 / THEORY</span>
+</div>
+<div class="material-info">
+<span class="material-category">ТЕОРИЯ</span>
+<h3>Авторские конспекты</h3>
+<p>
+                                Основные формулы, связи между темами
+                                и понятные объяснения для самостоятельного повторения.
+                            </p>
+<a class="button materials-download-button" href="https://t.me/BekkhanMath" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↓</span> Скачать</a>
+</div>
+</article>
+<article class="material-card">
+<div class="material-image material-image-2">
+<img alt="Примеры пошаговых решений задач ЕГЭ" loading="lazy" src="../images/photo3.png"/>
+<span class="material-image-label">02 / SOLUTIONS</span>
+</div>
+<div class="material-info">
+<span class="material-category">ПРАКТИКА</span>
+<h3>Пошаговые решения</h3>
+<p>
+                                Разбор сложных задач с объяснением
+                                каждого этапа.
+                            </p>
+</div>
+</article>
+<article class="material-card">
+<div class="material-image material-image-3">
+<img alt="Учебные материалы и задания для самостоятельной работы" loading="lazy" src="../images/photo4.png"/>
+<span class="material-image-label">03 / PRACTICE</span>
+</div>
+<div class="material-info">
+<span class="material-category">ЗАКРЕПЛЕНИЕ</span>
+<h3>Домашние задания</h3>
+<p>
+                                Задания для самостоятельной работы
+                                с разбором ошибок на уроке.
+                            </p>
+</div>
+</article>
+</div>
+<div class="materials-bottom-note">
+<span class="materials-note-icon">✳</span>
+<p>
+                        Материалы создаются под текущую тему,
+                        уровень подготовки и цель вашего ребёнка.
+                    </p>
+</div>
+</div>
+</section></main><footer class="footer"><div class="container footer-inner"><a class="logo footer-logo" href="#home">BekkhanMath<span>.</span>ru</a><p class="footer-copyright">© 2026 Бекхан Висаев. Все права защищены.</p><a aria-label="Вернуться наверх" class="back-to-top" href="#home">↑</a></div></footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".navigation");
+    if (!toggle || !nav) return;
+    const closeMenu = () => {
+        nav.classList.remove("is-open");
+        toggle.classList.remove("is-active");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Открыть меню");
+    };
+    toggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("is-open");
+        toggle.classList.toggle("is-active", isOpen);
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        toggle.setAttribute("aria-label", isOpen ? "Закрыть меню" : "Открыть меню");
+    });
+    nav.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
+    document.addEventListener("click", event => {
+        if (!nav.contains(event.target) && !toggle.contains(event.target)) closeMenu();
+    });
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape") closeMenu();
+    });
+});
+</script>
+</body></html>

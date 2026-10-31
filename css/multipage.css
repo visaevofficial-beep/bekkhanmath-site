@@ -1,0 +1,36 @@
+
+/* Дополнительные стили многостраничной версии */
+.page-main { padding-top: 112px; }
+.page-main > .section:first-child { padding-top: 72px; }
+.page-main .section { min-height: 60vh; }
+.page-main .section-dark { min-height: 60vh; }
+.page-main .contacts-section { padding-top: 80px; padding-bottom: 80px; }
+.page-main .section-heading { margin-bottom: 54px; }
+.page-main .page-intro { padding: 90px 0 35px; }
+.page-main .page-intro .eyebrow { margin-bottom: 24px; }
+.page-main .page-intro h1 { max-width: 900px; }
+.materials-telegram { display:flex; justify-content:center; margin-top:42px; }
+.materials-telegram .button { gap:10px; }
+.navigation a[aria-current="page"] { color: var(--chalk-green-light); }
+.navigation a { transition: color var(--transition); }
+.navigation a:hover { color: var(--chalk-green-light); }
+@media (max-width: 760px) {
+  .page-main { padding-top: 90px; }
+  .page-main > .section:first-child { padding-top: 55px; }
+  .page-main .section-heading { margin-bottom: 32px; }
+  .materials-telegram { margin-top: 28px; }
+}
+
+.materials-telegram .button {
+    background: var(--burgundy);
+    color: var(--white);
+    border-color: var(--burgundy);
+}
+.materials-telegram .button:hover {
+    background: var(--burgundy-dark);
+    border-color: var(--burgundy-dark);
+}
+
+/* Главная начинается сразу под фиксированной по макету шапкой. */
+.page-main.home-main { padding-top: 0; }
+.page-main.home-main > .hero { margin-top: 0; }
